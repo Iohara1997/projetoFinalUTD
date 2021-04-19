@@ -1,5 +1,5 @@
 # projetoFinalUTD
-##Projeto de conclusão do curso de PHP pela UTD##
+##Projeto de conclusão do curso de PHP pela UTD## <br>
 ###Este projeto contem:### :notebook:
 - Manipulação de arquivos;
 - Manipulação de bando de dados;
