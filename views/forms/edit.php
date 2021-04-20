@@ -1,14 +1,9 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 <?php
-#incluinfo os dados necessarios
-	include_once 'Connect.class.php';
-	include_once 'Manager.class.php';
-
 
 	# buscando os dados la na tabela
 	$manager = new Manager;
 
-	$dados = $manager->select_common("produto",null, ['codproduto'=>$_GET['id']], " ORDER BY codproduto DESC");	
+	$dados = $manager->select_common("produto",null, ['codproduto'=>$_GET['edit_produto']], " ORDER BY codproduto DESC");	
 ?>
 
 <div class="container">

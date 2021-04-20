@@ -42,7 +42,7 @@
 
 							<td><?=$d['qtdemin'];?></td>
 							<td>
-								<a href="edit.php?id=<?=$d['codproduto'];?>" class="btn btn-xs btn-warning"> <i class="fa fa-pencil"></i> </a>
+								<a href="?edit_produto=<?=$d['codproduto'];?>" class="btn btn-xs btn-warning"> <i class="fa fa-pencil"></i> </a>
 								<a href="controllerProduto.php?id=<?=$d['codproduto'];?>&action=delete" class="btn btn-xs btn-danger"> <i class="fa fa-trash"></i> </a>
 								
 							</td>

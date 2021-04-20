@@ -5,12 +5,48 @@
 	include_once $GLOBALS['project_path']."/models/Manager.class.php";
 
 	function validate_options(){
+		
+		if(isset($_GET['edit_produto'])){
+			$filter = $_GET['edit_produto'];
+			include_once $GLOBALS['project_path']."/views/forms/edit.php";
+		}
 
 		if(!isset($_GET['option'])){
 			return false;
 		}		
 
 		switch($_GET['option']){
+		case "edit_produto1":
+				# Busca	
+
+				$table_content = select("tb_users",null,array("profile_id"=>3),null);
+				
+				# Titulos
+				$table_titles['id_user'] = "ID";	
+				$table_titles['user_name'] = "NOME";	
+				$table_titles['user_phone'] = "TELEFONE";	
+				$table_titles['user_email'] = "EMAIL";	
+				$table_titles['user_limit'] = "LIMITE";	
+
+				# Liberação das Ações
+				$delete = true;
+				$update = true;
+				$print  = false;
+
+				# Caminho das Ações
+				$delete_destiny = "controllers/delete_user.php";
+				$update_destiny = "?option=update_user";
+
+				# Filtro
+				$filter = "id_user";
+				$table_color = "#00853B";
+				$table_icon = "plus";
+				$table_header = " Lista de Clientes <hr>";
+				# Incluindo a 'THE FUCKING TABLE'
+				include_once $GLOBALS['project_path']."/views/list_common.html";
+			break;
+
+			
 
 			case "add_produto":
 				include_once $GLOBALS['project_path']."/views/forms/insert.php";
