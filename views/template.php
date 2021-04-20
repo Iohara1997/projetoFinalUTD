@@ -22,7 +22,7 @@
     <body onload="startTime()">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#"><i class="fa fa-book"></i> Caderneta Power</a>
+          <a class="navbar-brand" href="#"><i class="fa fa-book"></i> Área de trabalho</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -70,8 +70,8 @@
             <!-- Sidebar  -->
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3>Caderneta Power</h3>
-                    <strong><i class="fa fa-book"></i> CP </strong>
+                    <h3>Menu</h3>
+                    <strong><i class="fa fa-book"></i> M </strong>
                 </div>
 
                 <!-- MENU -->

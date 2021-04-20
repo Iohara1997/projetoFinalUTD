@@ -1,8 +1,9 @@
 <?php 
 
 
-	include_once 'Connect.class.php';
-	include_once 'Manager.class.php';
+	include_once dirname(__DIR__)."/models/config.php";
+	include_once $project_path."/models/Connect.class.php";
+	include_once $project_path."/models/Manager.class.php";
 
 	//Se for delete
 	if(isset($_GET['action']) && $_GET['action'] == "delete"){
@@ -33,5 +34,5 @@
 	}
 
 
-	header("location: index.php");
+	header("location: $project_index/".$user['profile_page']."?option=manager_produtos&success=insert_ok");
 ?>

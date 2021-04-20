@@ -7,7 +7,7 @@
 	# Rotas 
 
 	# Nome do Projeto
-	$project_name = "/ProjetoFinal/";
+	$project_name = "/ProjetoFinal";
 
 	# Url do Caminho do servidor na rede
 	$project_index = "http://".$_SERVER['SERVER_NAME'].$project_name;

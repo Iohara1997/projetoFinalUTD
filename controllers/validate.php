@@ -12,6 +12,14 @@
 
 		switch($_GET['option']){
 
+			case "add_produto":
+				include_once $GLOBALS['project_path']."/views/forms/insert.php";
+			break;
+
+			case "manager_produtos":
+				include_once $GLOBALS['project_path']."/views/forms/produto.php";
+			break;
+
 			case "base":
 				# Busca	
 				$table_content = select("tb_profiles",null,null,null);

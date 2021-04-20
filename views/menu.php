@@ -22,16 +22,16 @@
 </li>
 
 <li class="active">
-    <a href="#homeClients" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+    <a href="#homeProdutos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
         <i class="fa fa-shopping-cart"></i>
-        Clientes
+        Produtos
     </a>
-    <ul class="collapse list-unstyled" id="homeClients">
+    <ul class="collapse list-unstyled" id="homeProdutos">
         <li>
-            <a href="?option=add_client"><i class="fa fa-plus"></i> Cadastrar</a>
+            <a href="?option=add_produto"><i class="fa fa-plus"></i> Cadastrar</a>
         </li>
         <li>
-            <a href="?option=manager_clients"><i class="fa fa-cogs"></i> Gerenciar </a>
+            <a href="?option=manager_produtos"><i class="fa fa-cogs"></i> Gerenciar </a>
         </li>        
     </ul>
 </li>
