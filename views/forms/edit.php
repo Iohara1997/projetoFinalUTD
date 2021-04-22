@@ -3,7 +3,7 @@
 	# buscando os dados la na tabela
 	$manager = new Manager;
 
-	$dados = $manager->select_common("produto",null, ['codproduto'=>$_GET['edit_produto']], " ORDER BY codproduto DESC");	
+	$dados = $manager->select_common("produto",null, ['codproduto'=>$_GET['edit_produto']],null);	
 ?>
 
 <div class="container">
@@ -17,7 +17,7 @@
 			<h3> Formulario de Edição </h3>
 
 
-			<form action="controllerProduto.php" method="POST">
+			<form action="./controllers/controllerProduto.php" method="POST">
 				<label> Produto </label>
 				<input type="text" name="descricao" value="<?=$dados[0]['descricao'];?>" class="form-control"><br><br>
 

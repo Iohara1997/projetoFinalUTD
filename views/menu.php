@@ -37,11 +37,11 @@
 </li>
 
 <li class="active">
-    <a href="#homeFiados" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+    <a href="#homeFornecedor" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
         <i class="fa fa-credit-card-alt"></i>
-        Fiados
+        Fornecedor
     </a>
-    <ul class="collapse list-unstyled" id="homeFiados">
+    <ul class="collapse list-unstyled" id="homeFornecedor">
         <li>
             <a href="?option="><i class="fa fa-plus"></i> Cadastrar</a>
         </li>

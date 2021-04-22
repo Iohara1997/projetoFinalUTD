@@ -5,10 +5,13 @@
 	include_once $GLOBALS['project_path']."/models/Manager.class.php";
 
 	function validate_options(){
-		
 		if(isset($_GET['edit_produto'])){
 			$filter = $_GET['edit_produto'];
 			include_once $GLOBALS['project_path']."/views/forms/edit.php";
+		}
+
+		if(isset($_GET['delete_produto'])){
+			include_once $GLOBALS['project_path']."/controllers/controllerProduto.php";
 		}
 
 		if(!isset($_GET['option'])){
@@ -16,37 +19,21 @@
 		}		
 
 		switch($_GET['option']){
-		case "edit_produto1":
-				# Busca	
 
-				$table_content = select("tb_users",null,array("profile_id"=>3),null);
-				
-				# Titulos
-				$table_titles['id_user'] = "ID";	
-				$table_titles['user_name'] = "NOME";	
-				$table_titles['user_phone'] = "TELEFONE";	
-				$table_titles['user_email'] = "EMAIL";	
-				$table_titles['user_limit'] = "LIMITE";	
+		
 
-				# Liberação das Ações
-				$delete = true;
-				$update = true;
-				$print  = false;
+			case "update_client":
 
-				# Caminho das Ações
-				$delete_destiny = "controllers/delete_user.php";
-				$update_destiny = "?option=update_user";
+				$filter['id_user'] = base64_decode($_GET['filter']);
+				$user_r = select("tb_users",null,$filter, null);
 
-				# Filtro
-				$filter = "id_user";
-				$table_color = "#00853B";
-				$table_icon = "plus";
-				$table_header = " Lista de Clientes <hr>";
-				# Incluindo a 'THE FUCKING TABLE'
-				include_once $GLOBALS['project_path']."/views/list_common.html";
+				$user_r = $user_r[0];
+
+				//$profile_u = select("tb_profiles",array("profile_name"), array("id_profile"=>$user_r['profile_id']),null);
+
+				include_once $GLOBALS['project_path']."/views/forms/update_user.php";
+
 			break;
-
-			
 
 			case "add_produto":
 				include_once $GLOBALS['project_path']."/views/forms/insert.php";
@@ -55,6 +42,15 @@
 			case "manager_produtos":
 				include_once $GLOBALS['project_path']."/views/forms/produto.php";
 			break;
+
+			case "manager_users":
+				include_once $GLOBALS['project_path']."/views/forms/manager_users.php";
+			break;
+
+		
+
+
+
 
 			case "base":
 				# Busca	
@@ -84,11 +80,12 @@
 				include_once $GLOBALS['project_path']."/views/list_common.html";
 			break;
 
+
 			case "add_user":
-				include_once $GLOBALS['project_path']."/views/forms/add_user.html";
+				include_once $GLOBALS['project_path']."/views/forms/add_user.php";
 			break;
 
-			case "manager_users":
+			case "manager_users1":
 				# Busca	
 				$table_content = select("tb_users",null,null,null);
 				
@@ -125,13 +122,13 @@
 
 				$profile_u = select("tb_profiles",array("profile_name"), array("id_profile"=>$user_r['profile_id']),null);
 
-				include_once $GLOBALS['project_path']."/views/forms/update_user.html";
+				include_once $GLOBALS['project_path']."/views/forms/update_user.php";
 
 			break;
 
 
 			case "add_client":
-				include_once $GLOBALS['project_path']."/views/forms/add_user.html";
+				include_once $GLOBALS['project_path']."/views/forms/add_user.php";
 			break;
 
 			case "manager_clients":
